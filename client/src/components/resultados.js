@@ -139,7 +139,7 @@ const ResultadosComponent = (props) => {
   let pointsStr = ''
   usersWithPoints.forEach(u => pointsStr += `username: ${u.username}, points: ${u.totalPoints} - `);
   alert(pointsStr);
-  let pointsStr = ''
+  pointsStr = ''
 
   usersWithPoints.sort((a, b) => a.totalPoints - b.totalPoints);
   usersWithPoints.forEach(u => pointsStr += `username: ${u.username}, points: ${u.totalPoints} - `);
