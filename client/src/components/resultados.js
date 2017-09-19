@@ -136,7 +136,12 @@ const ResultadosComponent = (props) => {
     });
   });
 
+  let pointsStr = usersWithPoints.map(u => `username: ${u.username}, points: ${u.totalPoints} - `);
+  alert('pointsStr', pointsStr);
   usersWithPoints.sort((a, b) => a.totalPoints < b.totalPoints);
+  pointsStr = usersWithPoints.map(u => `username: ${u.username}, points: ${u.totalPoints} - `);
+  alert('pointsStr despues del sort', pointsStr);
+
 
   const pointsTableThs = usersWithPoints &&
   usersWithPoints[0] &&
