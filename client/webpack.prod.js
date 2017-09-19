@@ -3,7 +3,7 @@ const merge = require('webpack-merge');
 const common = require('./webpack.config.js');
 
 module.exports = merge(common, {
-  devtool: 'cheap-module-source-map',
+  devtool: 'source-map',
   plugins: [
   new webpack.DefinePlugin({
     'process.env': {
