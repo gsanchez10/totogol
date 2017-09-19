@@ -10,7 +10,7 @@ const cors = require('cors');
 const path = require('path');
 
 // DB Setup
-mongoose.connect('mongodb://localhost:totogol/totogol');
+mongoose.connect('mongodb://totogolUser:sanques@ds139964.mlab.com:39964/heroku_w2br59ks');
 
 // App Setup
 app.use(express.static('./client'));
