@@ -143,9 +143,10 @@ const ResultadosComponent = (props) => {
   usersWithPoints[0].fechas.map(fecha => <th key={'th-'+fecha.number}>Fecha {fecha.number}</th>);
 
   const pointsTableTrs = usersWithPoints &&
-  usersWithPoints.map(user => {
+  usersWithPoints.map((user, i) => {
     return (
       <tr key={user.username}>
+        <td>{i+1}</td>
         <td>{user.username}</td>
         {user.fechas && user.fechas.map(fecha => <td key={user.username + '-' + fecha.number}>{fecha.points}</td>)}
         <td>{user.totalPoints}</td>
@@ -159,6 +160,7 @@ const ResultadosComponent = (props) => {
       <table className="table">
         <thead>
           <tr>
+            <th>Pos</th>
             <th>Usuario</th>
             {pointsTableThs}
             <th>Puntos totales</th>

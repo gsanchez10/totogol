@@ -157,6 +157,10 @@ footer {
   background: rgba(0,0,0,0.6);
 }
 
+.puntosFecha th {
+  min-width: 45px;
+}
+
 .totalsTable table {
   background: rgba(0,0,0,0.6);
 }
