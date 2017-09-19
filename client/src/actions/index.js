@@ -2,8 +2,8 @@ import axios from 'axios';
 import { browserHistory } from 'react-router';
 import { AUTH_USER, AUTH_ERROR, GET_PACKS, UNAUTH_USER } from './types';
 
-const ROOT_URL = 'http://localhost:' + process.env.PORT || 3090;
-//const ROOT_URL = 'https://totogol.herokuapp.com';
+//const ROOT_URL = 'http://localhost:' + process.env.PORT || 3090;
+const ROOT_URL = 'https://totogol.herokuapp.com';
 
 export function signinUser({ username, password }) {
 	return function(dispatch) {
