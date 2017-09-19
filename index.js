@@ -11,6 +11,7 @@ const path = require('path');
 
 // DB Setup
 mongoose.connect('mongodb://totogolUser:sanques@ds139964.mlab.com:39964/heroku_w2br59ks');
+//mongoose.connect('mongodb://localhost:totogol/totogol');
 
 // App Setup
 app.use(express.static('./client'));
