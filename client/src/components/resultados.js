@@ -136,11 +136,12 @@ const ResultadosComponent = (props) => {
     });
   });
 
-  let pointsStr = usersWithPoints.map(u => `username: ${u.username}, points: ${u.totalPoints} - `);
-  alert('pointsStr', pointsStr);
+  let pointsStr = ''
+  usersWithPoints.forEach(u => pointsStr += `username: ${u.username}, points: ${u.totalPoints} - `);
+  alert(pointsStr);
   usersWithPoints.sort((a, b) => a.totalPoints < b.totalPoints);
-  pointsStr = usersWithPoints.map(u => `username: ${u.username}, points: ${u.totalPoints} - `);
-  alert('pointsStr despues del sort', pointsStr);
+  usersWithPoints.forEach(u => pointsStr += `username: ${u.username}, points: ${u.totalPoints} - `);
+  alert(pointsStr);
 
 
   const pointsTableThs = usersWithPoints &&
