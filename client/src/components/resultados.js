@@ -3,7 +3,14 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 const ResultadosComponent = (props) => {
-  const usersResults = props.fechas.map(systemFecha => {
+  let usersResults = props.fechas.filter(systemFecha => {
+    const now = new Date();
+    const fechaClosingDate = new Date(systemFecha.closingDate);
+    const isClosed = now >= fechaClosingDate;
+
+    return isClosed;
+  });
+  usersResults = usersResults.map(systemFecha => {
     const modifiedFecha = Object.assign({}, systemFecha);
     const modifiedFechaGames = modifiedFecha.games.map(systemGame => {
       const modifiedGame = Object.assign({}, systemGame);
