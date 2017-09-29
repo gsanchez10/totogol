@@ -1,4 +1,4 @@
-.wrapper {
+    .wrapper {
   background: url(../img/soccer-field-night-image.jpg) 0 -219px;
   color: #fff;
   padding-bottom: 80px;
@@ -6,7 +6,7 @@
 }
 
 .container-fluid {
-  max-width: 500px;
+  max-width: 924px;
 }
 
 input {
