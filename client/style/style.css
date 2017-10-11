@@ -165,6 +165,18 @@ footer {
   background: rgba(0,0,0,0.6);
 }
 
+.green {
+  color: #0b6b03;
+}
+
+.yellow {
+  color: #f9f500;
+}
+
+.red {
+  color: #e21212;
+}
+
 @media (max-width: 667px) {
   .container-fluid {
     max-width: initial;

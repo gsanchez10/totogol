@@ -72,7 +72,9 @@ const ResultadosComponent = (props) => {
         );
           
         const tableRowsBody = fecha.games.map(game => {
-          const usersPredictions = game.predictions.map(prediction => <td key={prediction.username + '-' + fecha.number + '-' + game.number}>{prediction.goalsHome} - {prediction.goalsAway}</td>);
+          const usersPredictions = game.predictions.map(prediction => <td key={prediction.username + '-' + fecha.number + '-' + game.number}>
+            <span className={prediction.points === 3 ? 'green' : prediction.points === 1 ? 'yellow' : 'red'}>{prediction.goalsHome} - {prediction.goalsAway}</span>
+          </td>);
           return (<tr key={game.homeTeam + '-' + game.awayTeam}>
             <td>{game.homeTeam} vs {game.awayTeam}</td>
             <td>{game.goalsHome} - {game.goalsAway}</td>
